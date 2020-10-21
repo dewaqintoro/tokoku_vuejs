@@ -20,6 +20,13 @@
       "harga":30000000,
       "is_ready":true,
       "gambar": "iphonex.jpg" 
+    },
+    { "id": 4, 
+      "kode": "k-4", 
+      "nama": "Lenovo y", 
+      "harga":12000000,
+      "is_ready":true,
+      "gambar": "lenovo.png" 
     }
   ],
   "products": [

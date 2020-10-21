@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
+  <div class="home"> 
     <Navbar/>
     <div class="container">
       <Hero/>
       <div class="row mt-4">
         <div class="col">
-          <h2>Produk <strong>Terlaris</strong></h2>
+          <h2>Produk <strong>Terlaris1</strong></h2>
         </div>
 
         <div class="col">
@@ -14,7 +14,7 @@
       </div>
 
       <div class="row mb-3">
-        <div class="col-md mt-4" v-for="product in products" :key="product.id">
+        <div class="col-md-3 mt-4" v-for="product in products" :key="product.id">
           <CardProduct :product="product"/>
         </div>
       </div>

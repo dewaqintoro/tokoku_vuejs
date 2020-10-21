@@ -9,7 +9,7 @@
             <div class="justify-content-center align-self-center">
               <h2>Barang Elektronik <strong><br>Berkualitas</strong></h2>
               <p>Temukan gadget impianmu.</p>
-              <button class="btn btn-lg btn-success">Pesan <b-icon-arrow-right></b-icon-arrow-right></button>
+              <router-link to="/elektronik" class="btn btn-lg btn-success">Pesan <b-icon-arrow-right></b-icon-arrow-right></router-link >
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@
             <div class="justify-content-center align-self-center">
               <h2>Barang Elektronik <strong><br>Berkualitas</strong></h2>
               <p>Temukan gadget impianmu.</p>
-              <button class="btn btn-lg btn-success">Pesan <b-icon-arrow-right></b-icon-arrow-right></button>
+              <router-link to="/elektronik" class="btn btn-lg btn-success">Pesan <b-icon-arrow-right></b-icon-arrow-right></router-link >
             </div>
           </div>
         </div>
