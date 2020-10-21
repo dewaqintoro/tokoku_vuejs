@@ -1,0 +1,70 @@
+{
+  "best-products": [
+    { "id": 1, 
+      "kode": "k-1", 
+      "nama": "Lenovo y", 
+      "harga":12000000,
+      "is_ready":true,
+      "gambar": "lenovo.png" 
+    },
+    { "id": 2, 
+      "kode": "k-2", 
+      "nama": "Iphone x", 
+      "harga":13000000,
+      "is_ready":true,
+      "gambar": "iphonex.jpg" 
+    },
+    { "id": 3, 
+      "kode": "k-3", 
+      "nama": "Asus ROG", 
+      "harga":30000000,
+      "is_ready":true,
+      "gambar": "iphonex.jpg" 
+    }
+  ],
+  "products": [
+    { "id": 1, 
+      "kode": "k-1", 
+      "nama": "Lenovo y", 
+      "harga":12000000,
+      "is_ready":true,
+      "gambar": "lenovo.png" 
+    },
+    { "id": 2, 
+      "kode": "k-2", 
+      "nama": "Iphone x", 
+      "harga":12000000,
+      "is_ready":true,
+      "gambar": "iphonex.jpg" 
+    },
+    { "id": 3, 
+      "kode": "k-3", 
+      "nama": "Lenovo y", 
+      "harga":12000000,
+      "is_ready":true,
+      "gambar": "lenovo.png" 
+    },
+    { "id": 4, 
+      "kode": "k-4", 
+      "nama": "Lenovo y", 
+      "harga":12000000,
+      "is_ready":true,
+      "gambar": "lenovo.png" 
+    },
+    { "id": 5, 
+      "kode": "k-5", 
+      "nama": "Lenovo y", 
+      "harga":12000000,
+      "is_ready":true,
+      "gambar": "lenovo.png" 
+    },
+    { "id": 6, 
+      "kode": "k-6", 
+      "nama": "Lenovo y", 
+      "harga":12000000,
+      "is_ready":true,
+      "gambar": "lenovo.png" 
+    }
+  ],
+  "profile": { "name": "typicode" }
+}
