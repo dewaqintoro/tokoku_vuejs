@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar/>
+    <!-- <Navbar/> -->
     <div class="container">
       <div class="row mt-4">
         <div class="col">
@@ -40,14 +40,14 @@
 </template>
  
 <script>
-import Navbar from '@/components/Navbar.vue'
+// import Navbar from '@/components/Navbar.vue'
 import CardProduct from '@/components/CardProduct.vue'
 import axios from "axios"
 
 export default {
   name:"Elektronik",
   components:{
-    Navbar,
+    // Navbar,
     CardProduct
   },
   data(){
