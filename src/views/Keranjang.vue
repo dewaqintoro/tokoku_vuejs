@@ -58,6 +58,24 @@
           </div>
         </div>
       </div>
+
+      <div class="row justify-content-end">
+        <div class="col-md-4">
+          <form class="mt-4" v-on:submit.prevent>
+            <div class="form-group">
+              <label for="nama">Nama</label>
+              <input type="text" class="form-control" v-model="pesan.nama">
+            </div>
+
+            <div class="form-group">
+              <label for="noMeja">Nomor Meja</label>
+              <input type="number" class="form-control" v-model="pesan.noMeja">
+            </div>
+
+            <button type="submit" class="btn btn-success float-right" @click="checkout"><b-icon-cart></b-icon-cart> Pesan</button >
+          </form>
+        </div>
+      </div>
    </div>
 </div>
 </template>
@@ -72,7 +90,8 @@ export default {
   }, 
   data(){
     return{
-      keranjangs:[]
+      keranjangs:[],
+      pesan:{}
     }
   },
   methods:{
@@ -105,6 +124,46 @@ export default {
           dismissible: true
         })
       })
+    }, 
+    checkout(){
+      if(this.pesan.nama && this.pesan.noMeja){
+        // console.log("keranjangs",this.keranjangs)
+ 
+      this.pesan.keranjangs = this.keranjangs;
+      console.log("pesan",this.pesan.keranjangs)
+
+      axios
+      .post("http://localhost:3004/pesanan", this.pesan)
+      .then(() => {
+
+        this.keranjangs.map(function(item){
+          return (
+            axios
+            .delete("http://localhost:3004/keranjang/" + item.id)
+            .catch((error) => console.log(error))
+          )
+        });
+
+        this.$router.push({path:"/pesanan"})
+        this.$toast.success('Berhasil Melakukan Pesanan', {
+          type:'success',
+          position:'top-right',
+          duration:3000,
+          dismissible: true
+        })
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+
+      }else{
+        this.$toast.error('Masukkan Nama & Nomor Meja', {
+          type:'error',
+          position:'top-right',
+          duration:3000,
+          dismissible: true
+        })
+      }
     }
   },
   mounted(){

@@ -1,34 +1,40 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light">
+
+<div>
+  <b-navbar toggleable="lg" type="light">
     <div class="container">
-      <a class="navbar-brand" href="#">TokoQhu</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <b-navbar-brand href="#">LapakKu</b-navbar-brand>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <router-link class="nav-link" to="/">Home</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/elektronik">Elektronik</router-link>
-          </li>
-        </ul>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <router-link class="nav-link" to="/keranjang">
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+        <b-nav-item>
+          <router-link class="nav-link" to="/">Home</router-link>
+        </b-nav-item>
+
+        <b-nav-item>
+          <router-link class="nav-link" to="/elektronik">Elektronik</router-link>
+        </b-nav-item>
+
+      </b-navbar-nav>
+
+      <!-- Right aligned nav items -->
+      <b-navbar-nav class="ml-auto">
+        <b-nav-form>
+          <router-link class="nav-link" to="/keranjang">
             Keranjang
             <b-icon-bag></b-icon-bag>
             <span class="badge badge-success ml-2">{{updateKeranjang ? updateKeranjang.length : jumlah_pesanan.length}}</span>
-            </router-link>
-          </li>
-        </ul>
-
-      </div>
+          </router-link>
+        </b-nav-form>
+      </b-navbar-nav>
+    </b-collapse>
     </div>
-  </nav>
+    
+  </b-navbar>
+</div>
+
 </template>
 
 <script>
